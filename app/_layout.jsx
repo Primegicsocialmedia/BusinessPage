@@ -2,6 +2,7 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { ClerkProvider, ClerkLoaded, SignedIn, SignedOut } from "@clerk/clerk-expo";
 import { Text } from "react-native";
+import LoginScreen from './../components/LoginScreen'
 
 export default function RootLayout() {
   useFonts({
@@ -21,7 +22,8 @@ export default function RootLayout() {
       </SignedIn>
 
       <SignedOut>
-        <Text>SignedOut</Text></SignedOut>
+        <LoginScreen/>
+      </SignedOut>
       
     </ClerkProvider>
   );
