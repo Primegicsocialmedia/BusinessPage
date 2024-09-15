@@ -1,5 +1,6 @@
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
+import {ClerkProvider} from 
 
 export default function RootLayout() {
 
@@ -10,6 +11,7 @@ export default function RootLayout() {
   })
 
   return (
+    <ClerkProvider></ClerkProvider>
     <Stack screenOptions={{headerShown:false}}>
       <Stack.Screen name="(tabs)"/>
     </Stack>
